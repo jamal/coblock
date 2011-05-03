@@ -151,18 +151,7 @@ void Game::Run() {
         // Render the frame
         cpSpaceStep(_space, GetFrameTime());
         
-        _window.Clear(_color);
-        
-        if (_frameListeners.size() > 0) {
-            std::vector<FrameListener*>::iterator it;
-            
-            for (it = _frameListeners.begin(); it != _frameListeners.end(); it++) {
-                (*it)->OnFrameEnter(*this);
-            }
-        }        
-        
-        // Display (and swap buffers)
-        _window.Display();
+        Signal::Render();
         
         Signal::FrameExit();
     }

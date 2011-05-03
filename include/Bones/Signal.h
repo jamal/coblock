@@ -14,6 +14,8 @@ namespace Bones {
         static boost::signals2::signal<void ()> FrameEnter;
         static boost::signals2::signal<void ()> FrameExit;
         
+        static boost::signals2::signal<void ()> Render;
+        
         static boost::signals2::signal<void ()> MouseButtonPressed;
         static boost::signals2::signal<void ()> MouseButtonReleased;
         static boost::signals2::signal<void ()> MouseMoved;

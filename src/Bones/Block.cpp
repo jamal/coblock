@@ -4,13 +4,11 @@ using namespace Bones;
 
 Block::Block() {
     
-    // TODO: DON'T DO THIS IN THE CONSTRUCTOR YOU DUMMY
-    
     _sprite.SetImage(*ResourceManager::LoadImage("block.png"));
     
     cpFloat width = _sprite.GetSize().x;
     cpFloat height = _sprite.GetSize().y;
-    
+    `
     printf("Size: %.2f, %.2f\n", width, height);
     
     cpFloat mass = 10.0f;

@@ -5,14 +5,14 @@ set(BONES_SRC_FILES ${BONES_SRC_FILES}
     "${PROJECT_SOURCE_DIR}/src/Bones/Game.cpp"
     "${PROJECT_SOURCE_DIR}/src/Bones/Signal.cpp"
     "${PROJECT_SOURCE_DIR}/src/Bones/ResourceManager.cpp"
-    "${PROJECT_SOURCE_DIR}/src/Bones/Block.cpp"
+    "${PROJECT_SOURCE_DIR}/src/Bones/Entity.cpp"
+    "${PROJECT_SOURCE_DIR}/src/Bones/SpriteEntity.cpp"
 
     "${PROJECT_SOURCE_DIR}/include/Bones/Game.h"
     "${PROJECT_SOURCE_DIR}/include/Bones/Signal.h"
-    "${PROJECT_SOURCE_DIR}/include/Bones/FrameListener.h"
-    "${PROJECT_SOURCE_DIR}/include/Bones/MouseListener.h"
     "${PROJECT_SOURCE_DIR}/include/Bones/ResourceManager.h"
-    "${PROJECT_SOURCE_DIR}/include/Bones/Block.h"
+    "${PROJECT_SOURCE_DIR}/include/Bones/Entity.h"
+    "${PROJECT_SOURCE_DIR}/include/Bones/SpriteEntity.h"
 )
 
 SOURCE_GROUP(Bones FILES ${BONES_SRC_FILES})
@@ -20,7 +20,10 @@ SOURCE_GROUP(Bones FILES ${BONES_SRC_FILES})
 set(SRC_FILES ${SRC_FILES}
     "${PROJECT_SOURCE_DIR}/src/main.cpp"
     "${PROJECT_SOURCE_DIR}/src/Coblock.cpp"
+    "${PROJECT_SOURCE_DIR}/src/Bones/Block.cpp"
+
     "${PROJECT_SOURCE_DIR}/include/Coblock.h"
+    "${PROJECT_SOURCE_DIR}/include/Bones/Block.h"
 
     ${BONES_SRC_FILES}
 )
