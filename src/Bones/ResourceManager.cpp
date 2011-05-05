@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #include "Bones/ResourceManager.h"
 
 using namespace Bones;

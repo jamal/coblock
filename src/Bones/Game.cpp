@@ -151,7 +151,7 @@ void Game::Run() {
         // Render the frame
         cpSpaceStep(_space, GetFrameTime());
         
-        Signal::Render();
+        Signal::FrameRender();
         
         Signal::FrameExit();
     }

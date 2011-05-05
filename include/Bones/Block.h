@@ -1,10 +1,13 @@
-#ifndef BONES_BLOCK_H
-#define BONES_BLOCK_H
+#ifndef BLOCK_H
+#define BLOCK_H
 
 #include "Bones/SpriteEntity.h"
 
+class Block {
 
-class Block : public SpriteEntity {
+    public:
+        Block();
+        ~Block();
 
 };
 

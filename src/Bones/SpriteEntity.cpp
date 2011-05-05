@@ -1,3 +1,5 @@
+#include "Bones/Game.h"
+#include "Bones/Signal.h"
 #include "Bones/SpriteEntity.h"
 #include "Bones/ResourceManager.h"
 
@@ -9,7 +11,7 @@ SpriteEntity::SpriteEntity(const char* filename)
     _filename = filename;
     _imageLoaded = false;
     
-    Signal::Render.connect(boost::bind(&SpriteEntity::Render, this));
+    Signal::FrameRender.connect(boost::bind(&SpriteEntity::Render, this));
 }
 
 SpriteEntity::~SpriteEntity() {
@@ -18,12 +20,12 @@ SpriteEntity::~SpriteEntity() {
 
 void SpriteEntity::SetPosition(float x, float y) {
     Entity::SetPosition(x, y);
-    _sprite.SetPosition(x, y);
+    _sprite->SetPosition(x, y);
 }
 
-void SetRotation(float radians) {
+void SpriteEntity::SetRotation(float radians) {
     Entity::SetRotation(radians);
-    _sprite.SetRotation(radians);
+    _sprite->SetRotation(radians);
 }
 
 void SpriteEntity::SetImage(const char* filename) {
@@ -40,6 +42,6 @@ void SpriteEntity::_LoadImage() {
 }
 
 void SpriteEntity::Render() const {
-    Game game = Game::Instance();
-    game.GetWindow().Draw(_sprite);
+    Game* game = Game::Instance();
+    game->GetWindow().Draw(*_sprite);
 }

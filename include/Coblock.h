@@ -15,8 +15,8 @@ using namespace Bones;
 class Coblock : public FrameListener {
 private:
 	Game* _game;
-    Block _block1;
-//    Block _block2;
+    //Block _block1;
+    //Block _block2;
 	
 public:
 	Coblock();

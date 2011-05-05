@@ -39,7 +39,7 @@ void Entity::SetSize(float width, float height) {
     _width = width;
     _height = height;
     _shape->body->m = cpMomentForBox(_mass, _width, _height);
-    _shape->
+    //_shape->
 }
 
 void Entity::SetPosition(float x, float y) {

@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "Coblock.h"
 
 Coblock::Coblock() {

@@ -15,10 +15,18 @@ namespace Bones {
     
     // TODO: Define operators for vectors
     
+    template<typename T>
+    Vector2<T>::Vector2() {
+    }
+
+    template<typename T>
+    Vector2<T>::Vector2(T x, T y) {
+    }
+
     // Define common types of Vector2
     typedef Vector2<int> Vector2i;
     typedef Vector2<float> Vector2f;
-    
+
 }
 
 #endif
